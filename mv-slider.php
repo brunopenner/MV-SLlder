@@ -12,7 +12,7 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: mv-slider
  * Domain Path: /languages
-*/
+ */
 
 /*
 MV Slider is free software: you can redistribute it and/or modify
@@ -28,3 +28,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with MV Slider. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
 */
+
+if (!defined('ABSPATH')) {
+    die('Bla bla bla');
+    exit;
+}
