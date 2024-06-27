@@ -1,3 +1,7 @@
+<?php
+$meta = get_post_meta($post->ID);
+?>
+
 <table class="form-table mv-slider-metabox">
     <tr>
         <th>
@@ -5,7 +9,7 @@
         </th>
         <td>
             <input type="text" name="mv_slider_link_text" id="mv_slider_link_text" class="regular-text link-text"
-                value="" required>
+                value="<?php echo esc_html($meta['mv_slider_link_text'][0]) ?? '' ?>" required>
         </td>
     </tr>
     <tr>
@@ -13,8 +17,8 @@
             <label for="mv_slider_link_url">Link URL</label>
         </th>
         <td>
-            <input type="url" name="mv_slider_link_url" id="mv_slider_link_url" class="regular-text link-url" value=""
-                required>
+            <input type="url" name="mv_slider_link_url" id="mv_slider_link_url" class="regular-text link-url"
+                value="<?php echo esc_url($meta['mv_slider_link_url'][0]) ?? '' ?>" required>
         </td>
     </tr>
 </table>
