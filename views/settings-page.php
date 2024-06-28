@@ -1,4 +1,4 @@
-<form action="">
+<!-- <form action="">
     <label for="test">Name</label>
     <input type="text" id="test" name="test">
 
@@ -17,4 +17,11 @@
         width: 100%;
         max-width: 500px;
     }
-</style>
+</style> -->
+
+<div class="wrap">
+    <h1><?php esc_html(get_admin_page_title()); ?></h1>
+    <form action="options.php" method="POST">
+
+    </form>
+</div>
