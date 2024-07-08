@@ -1,6 +1,5 @@
-// Can also be used with $(document).ready()
-$(window).load(function() {
-    $('.flexslider').flexslider({
+jQuery(window).on('load', function() {
+    jQuery('.flexslider').flexslider({
         animation: "slide",
         touch: true,
         directionNav: false,
