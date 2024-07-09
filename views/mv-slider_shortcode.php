@@ -22,7 +22,14 @@
                 $button_url = get_post_meta(get_the_ID(), 'mv_slider_link_url', true);
                 ?>
                 <li>
-                    <?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
+                    <?php
+                    if (has_post_thumbnail()):
+                        the_post_thumbnail('full', array('class' => 'img-fluid'));
+                    else:
+                        ?> <img src="<?php echo MV_SLIDER_URL . 'assets/images/default.jpg' ?>" alt="Default image"> <?php
+                    endif;
+                    ?>
+
                     <div class="mvs-container">
                         <div class="slider-details-container">
                             <div class="wrapper">
