@@ -82,7 +82,11 @@ if (!class_exists('MV_Slider')) {
         }
 
         public function load_textdomain() {
-
+            load_plugin_textdomain(
+                'mv-slider',
+                false,
+                dirname(plugin_basename(__FILE__)) . '/languages/'
+            );
         }
 
         public function add_menu()
