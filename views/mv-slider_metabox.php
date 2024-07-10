@@ -6,7 +6,7 @@ $meta = get_post_meta($post->ID);
     <input type="hidden" name="mv_slider_nonce" value="<?php echo wp_create_nonce("mv_slider_nonce"); ?>">
     <tr>
         <th>
-            <label for="mv_slider_link_text">Link Text</label>
+            <label for="mv_slider_link_text"><?php _e('Link Text', 'mv-slider') ?></label>
         </th>
         <td>
             <input type="text" name="mv_slider_link_text" id="mv_slider_link_text" class="regular-text link-text"
@@ -15,7 +15,7 @@ $meta = get_post_meta($post->ID);
     </tr>
     <tr>
         <th>
-            <label for="mv_slider_link_url">Link URL</label>
+            <label for="mv_slider_link_url"><?php _e('Link URL', 'mv-slider') ?></label>
         </th>
         <td>
             <input type="url" name="mv_slider_link_url" id="mv_slider_link_url" class="regular-text link-url"
