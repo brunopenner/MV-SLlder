@@ -40,6 +40,8 @@ if (!class_exists('MV_Slider')) {
         {
             $this->define_constants();
 
+            $this->load_textdomain();
+
             require_once (MV_SLIDER_PATH . 'functions/functions.php');
 
             add_action('admin_menu', array($this, 'add_menu'));
@@ -77,6 +79,10 @@ if (!class_exists('MV_Slider')) {
 
         public static function uninstall()
         {
+        }
+
+        public function load_textdomain() {
+
         }
 
         public function add_menu()
