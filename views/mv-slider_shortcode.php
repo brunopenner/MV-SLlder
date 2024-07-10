@@ -26,8 +26,7 @@
                     if (has_post_thumbnail()):
                         the_post_thumbnail('full', array('class' => 'img-fluid'));
                     else:
-                        ?> <img src="<?php echo MV_SLIDER_URL . 'assets/images/default.jpg' ?>" alt="Default image"
-                            class="img-fluid wp-post-image"> <?php
+                        echo mv_slider_get_placeholder_image();
                     endif;
                     ?>
 

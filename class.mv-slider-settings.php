@@ -92,16 +92,14 @@ if (!class_exists('MV_Slider_Settings')) {
 
         public function mv_slider_bullets_callback($args)
         {
-            $value = isset(self::$options['mv_slider_bullet']) ? self::$options['mv_slider_bullet'] : '';
             ?>
-            <label for="mv_slider_bullet_yes">
-                <input type="radio" name="mv_slider_options[mv_slider_bullet]" id="mv_slider_bullet_yes" value="yes" <?php checked($value, 'yes'); ?>>
-                Yes
-            </label>
-            <label for="mv_slider_bullet_no">
-                <input type="radio" name="mv_slider_options[mv_slider_bullet]" id="mv_slider_bullet_no" value="no" <?php checked($value, 'no'); ?>>
-                No
-            </label>
+            <input type="checkbox" name="mv_slider_options[mv_slider_bullets]" id="mv_slider_bullets" value="1" <?php
+            if (isset(self::$options['mv_slider_bullets'])) {
+                checked("1", self::$options['mv_slider_bullets'], true);
+            }
+            ?> />
+            <label for="mv_slider_bullets">Whether to display bullets or not</label>
+
             <?php
         }
 
